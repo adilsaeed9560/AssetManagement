@@ -1,4 +1,5 @@
-#Description
+# Description
+
 Any company has assets like laptops, keyboard, stationary items, furniture etc. It is important for a company to keep a track of these assets, their condition,
 and assignment to people to ensure rightful use of these assets and keep a track of them.  A REST based app is required which will expose the following services :
 
@@ -14,7 +15,7 @@ Recover an asset from an employee
 Delete an asset.  The rules here are : An asset cannot be delete which is in assigned state 
 
 
-#Tech Stack to be used:
+# Tech Stack to be used:
 
 Spring boot 2.4 
 
