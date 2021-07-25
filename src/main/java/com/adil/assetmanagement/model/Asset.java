@@ -15,13 +15,13 @@ public class Asset {
 	}
 	Date date;
 	String conditionNotes;
-	String categoryId;
+	Category category;
 	AssignmentStatus assignmentStatus;
 
 	@Override
 	public String toString() {
-		return "Asset [name=" + name + ", date=" + date + ", conditionNotes=" + conditionNotes + ", categoryId="
-				+ categoryId + ", assignmentStatus=" + assignmentStatus + "]";
+		return "Asset [name=" + name + ", date=" + date + ", conditionNotes=" + conditionNotes + ", category="
+				+ category + ", assignmentStatus=" + assignmentStatus + "]";
 	}
 	public String getName() {
 		return name;
@@ -42,11 +42,11 @@ public class Asset {
 		this.conditionNotes = conditionNotes;
 	}
 
-	public String getCategoryId() {
-		return categoryId;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 	public AssignmentStatus getAssignmentStatus() {
 		return assignmentStatus;
@@ -59,7 +59,7 @@ public class Asset {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((assignmentStatus == null) ? 0 : assignmentStatus.hashCode());
-		result = prime * result + ((categoryId == null) ? 0 : categoryId.hashCode());
+		result = prime * result + ((category == null) ? 0 : category.hashCode());
 		result = prime * result + ((conditionNotes == null) ? 0 : conditionNotes.hashCode());
 		result = prime * result + ((date == null) ? 0 : date.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
@@ -76,10 +76,10 @@ public class Asset {
 		Asset other = (Asset) obj;
 		if (assignmentStatus != other.assignmentStatus)
 			return false;
-		if (categoryId == null) {
-			if (other.categoryId != null)
+		if (category == null) {
+			if (other.category != null)
 				return false;
-		} else if (!categoryId.equals(other.categoryId))
+		} else if (!category.equals(other.category))
 			return false;
 		if (conditionNotes == null) {
 			if (other.conditionNotes != null)

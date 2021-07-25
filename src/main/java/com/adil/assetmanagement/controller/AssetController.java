@@ -30,10 +30,7 @@ public class AssetController {
 	}
 
 	@GetMapping
-	public List<Asset> getAsset(@RequestParam(required = false)String name) {
-		if(name == null)
-			return assetService.getAsset();
-		
+	public List<Asset> getAsset(@RequestParam(required = false)String name) {	
 		return assetService.searchAsset(name);
 	}
 
